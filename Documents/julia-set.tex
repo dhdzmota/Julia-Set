@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage[style=phys,url = true]{biblatex}
+
+\addbibresource{biblio.bib}
+
+\title{Julia Sets}
+\author{By Daniel Hernández Mota}
+\date{July, 2019}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+Fractals are one of the most beautiful mathematical objects to humans, they are mostly recognized as pretty pictures that break the usual implementation of geometry with mind-bending patterns. However, they actually constitute a branch of mathematics\footnote{In this text, we will center on complex algebra and recursiveness}, opening the possibility of using mathematical tools to describe their properties\cite{Edyta}. 
+
+Fractal theory is based on geometry and dimensions. This was a new paradigm that diverged from classical geometry because it was an alternative to the model that used simple Euclid figures such as lines, circles, conic sections, polygons, and so on. Most physical systems are not regular geometric shapes; thus, a description of reality needed more complicated and had to use irregular patterns to achieve a correct description\cite{Crownover}. For instance, coastlines, mountains, lightning, and parts of living organisms have this fractal-like geometry, where simple geometry wouldn't have been enough to represent these phenomena\cite{Edyta}.
+
+At their beginning, these mathematical objects were met with a huge distaste by the scientific community\footnote{They were even called monsters or pathological models.} due to the fact that they are defined in terms of fractional dimension\footnote{This term was first introduced in 1919, in the work of Felix Hausdorff. Nevertheless, formally the term fractal was introduced in 1975 by Benoit Mandelbrot.}(that's where the name fractal comes from). However, there are many concepts of dimension, thus, one can use each of the distinct concepts of dimension of a geometric configuration to describe its properties. Usually, there are three\cite{Crownover}:
+
+\begin{itemize}
+    \item \textbf{Box Dimension}
+    \begin{itemize}
+        \item Fractional dimension\footnote{Also called Minkowski dimension} concept of choice. It comes from the generalization of the usual dimension for not only integers but the whole real expetrum. It is usually computationally determined with the formula:
+        \begin{equation}
+            log N(x)=log(c)-dlog(x)
+        \end{equation}
+         where there is a value N(x) boxes of side x to cover the fractal area for several values\footnote{It is worth determining that the values of boxes will be an approximation} of x. 
+    \end{itemize}
+   
+    \item \textbf{Topological Dimension}
+    \begin{itemize}
+        \item It agrees with the intuitive notion, it is always an integer. 
+    \end{itemize}
+    \item \textbf{Hausdorff dimension}
+    \begin{itemize}
+        \item Has a mathematical treatment, it has a dimension greater than the topological. It is usually the same numerical value of dimension ans the Box dimension.
+    \end{itemize}
+\end{itemize}
+
+Naturally, the most important dimension when talking of fractals is the box dimension.
+
+Another property that fractals usually are account for is self-similarity. For this description, a fractal divided into an arbitrary number of $N$ elements will have the property of being thought of as a scaled version of the whole fractal, with the same fractional dimension\cite{Crownover}. In practical terms, one can simply think on self-similarity as obtaining the same shape after the magnification of the fractal\footnote{Of course this is not always true for all fractals}.
+
+One of the most popular fractals were made by Gaston Julia in 1918, he did a remarkable progress on the iteration of complex mapping. That is the composition of f(x) with itself an infinite number of times. Therefore, complex algebra is needed to fully understand the procedure.
+
+Any complex number, denoted by $z$ is just a number with two distrint parts, a real part $Re\{z\}$ and an imaginary part $Im\{z\}$. By renaming each of these components by the variables $a$ and $b$ respectively, one can think of the complex number to be in the most general case as
+
+$z=a+ib$ where $Re\{z\} = a$, $Im\{z\} = b$ and $i=\sqrt{-1}$
+
+Actually, one can think of a complex number being represented on a plane with two axis, the abscissa corresponds to the real component, and the ordinate corresponds to the Imaginary component. Therefore, when the imaginary component equals zero, the plane is only a line, that represents the well-known number line. 
+
+Thanks to the property that the complex number can be represented in a plane, one can define a distance between the center of the plane and the point. This distance could be determined by the classical formula method where 
+$d = \sqrt{a^2 + b^2}$, this distance is actually a parameter of the complex number: its magnitude. Usually stated as 
+
+$|z| = \sqrt{a^2 + b^2}$
+
+
+\begin{equation}
+    \frac{dx_1}{dt}=f_1(\vec{x},t),\quad \frac{dx_2}{dt}=f_2(\vec{x},t),\quad \dots, \quad \frac{dx_n}{dt}=f_n(\vec{x},t),
+\end{equation} 
+
+\begin{lstlisting}[language=Python, frame=single] 
+
+
+\end{lstlisting}
+
+
+\begin{figure}[h]
+    \centering{\includegraphics[scale=.7]{Images/rungekutta.png}}
+    \caption{Numerical solution for the system of equations.}
+    \label{fig:sol}
+\end{figure}
+
+
+
+\printbibliography[title = {References}]
+
+\end{document}
