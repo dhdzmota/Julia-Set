@@ -7,10 +7,11 @@
 \usepackage{listings}
 \usepackage{setspace}
 \usepackage[style=phys,url = true]{biblatex}
-
+\usepackage{amssymb}
+ 
 \addbibresource{biblio.bib}
 
-\title{Julia Sets}
+\title{Filled Julia Sets}
 \author{By Daniel Hernández Mota}
 \date{July, 2019}
 
@@ -19,20 +20,24 @@
 \maketitle
 
 \newpage
+\section{Introduction}
+
 Fractals are one of the most beautiful mathematical objects to humans, they are mostly recognized as pretty pictures that break the usual implementation of geometry with mind-bending patterns. However, they actually constitute a branch of mathematics\footnote{In this text, we will center on complex algebra and recursiveness}, opening the possibility of using mathematical tools to describe their properties\cite{Edyta}. 
 
 Fractal theory is based on geometry and dimensions. This was a new paradigm that diverged from classical geometry because it was an alternative to the model that used simple Euclid figures such as lines, circles, conic sections, polygons, and so on. Most physical systems are not regular geometric shapes; thus, a description of reality needed more complicated and had to use irregular patterns to achieve a correct description\cite{Crownover}. For instance, coastlines, mountains, lightning, and parts of living organisms have this fractal-like geometry, where simple geometry wouldn't have been enough to represent these phenomena\cite{Edyta}.
 
-At their beginning, these mathematical objects were met with a huge distaste by the scientific community\footnote{They were even called monsters or pathological models.} due to the fact that they are defined in terms of fractional dimension\footnote{This term was first introduced in 1919, in the work of Felix Hausdorff. Nevertheless, formally the term fractal was introduced in 1975 by Benoit Mandelbrot.}(that's where the name fractal comes from). However, there are many concepts of dimension, thus, one can use each of the distinct concepts of dimension of a geometric configuration to describe its properties. Usually, there are three\cite{Crownover}:
+At their beginning, these mathematical objects were met with a huge distaste by the scientific community\footnote{They were even called monsters or pathological models.} due to the fact that they are defined in terms of fractional dimension\footnote{This term was first introduced in 1919, in the work of Felix Hausdorff. Nevertheless, formally the term fractal was introduced in 1975 by Benoit Mandelbrot.}(that's where the name fractal comes from). However,as time passed, they were slowly being accepted. 
+\section{Some properties}
+For the geometric shapes, there are many concepts of dimension, thus, one can use each of the distinct concepts on a geometric configuration to describe its properties. Usually, there are three\cite{Crownover}:
 
 \begin{itemize}
     \item \textbf{Box Dimension}
     \begin{itemize}
-        \item Fractional dimension\footnote{Also called Minkowski dimension} concept of choice. It comes from the generalization of the usual dimension for not only integers but the whole real expetrum. It is usually computationally determined with the formula:
+        \item Fractional dimension\footnote{Also called Minkowski dimension} concept of choice. It comes from the generalization of the usual dimension for not only integers but the whole real number spectrum, which also account for length, area and volume. It is computationally determined with the reduced formula:
         \begin{equation}
-            log N(x)=log(c)-dlog(x)
+            log N(x)=- dlog(x)
         \end{equation}
-         where there is a value N(x) boxes of side x to cover the fractal area for several values\footnote{It is worth determining that the values of boxes will be an approximation} of x. 
+         where there is a value $N(x)$ boxes of side $x$ to cover the fractal area for several values for $x$ of $x$ and $d$ is the dimension\footnote{It is worth determining that the values of boxes will be an approximation. In other words an empirical value for the dimension.}.
     \end{itemize}
    
     \item \textbf{Topological Dimension}
@@ -47,27 +52,56 @@ At their beginning, these mathematical objects were met with a huge distaste by 
 
 Naturally, the most important dimension when talking of fractals is the box dimension.
 
-Another property that fractals usually are account for is self-similarity. For this description, a fractal divided into an arbitrary number of $N$ elements will have the property of being thought of as a scaled version of the whole fractal, with the same fractional dimension\cite{Crownover}. In practical terms, one can simply think on self-similarity as obtaining the same shape after the magnification of the fractal\footnote{Of course this is not always true for all fractals}.
+Another property that fractals usually are account for is self-similarity. For this description, a fractal divided into an arbitrary number of $N$ elements will have the property of being thought of as a scaled version of the whole fractal, with the same fractional dimension\cite{Crownover}. In practical terms, one can simply think on self-similarity as obtaining the same shape after the magnification of the fractal However, it is worth mentioning that this characteristic is not always true for all fractals.
 
-One of the most popular fractals were made by Gaston Julia in 1918, he did a remarkable progress on the iteration of complex mapping. That is the composition of f(x) with itself an infinite number of times. Therefore, complex algebra is needed to fully understand the procedure.
+\section{Filled Julia Set}
 
-Any complex number, denoted by $z$ is just a number with two distrint parts, a real part $Re\{z\}$ and an imaginary part $Im\{z\}$. By renaming each of these components by the variables $a$ and $b$ respectively, one can think of the complex number to be in the most general case as
+One of the most popular fractals were made by Gaston Julia\footnote{Gaston Julia (1893-1978), born in France. Severely wounded in the First World War loosing his nose, he carried on his mathematical research in the hospital. His work with the aid of a computer yields some of the most attractive and beautiful fractals.} in 1918, he did a remarkable work on the iteration of complex mapping; actually he was 25 years old when he published his text \textit{Mémoire  sur  l’iteration  des  fonctions  rationnelles}\cite{PJS}. Therefore, the knowledge of complex algebra\footnote{In order to have a better idea of the complex algebra and how to manipulate the expressions, refer to \cite{wolfram}} is crucial to fully understand the procedure he did to obtain the results.
 
-$z=a+ib$ where $Re\{z\} = a$, $Im\{z\} = b$ and $i=\sqrt{-1}$
-
-Actually, one can think of a complex number being represented on a plane with two axis, the abscissa corresponds to the real component, and the ordinate corresponds to the Imaginary component. Therefore, when the imaginary component equals zero, the plane is only a line, that represents the well-known number line. 
-
-Thanks to the property that the complex number can be represented in a plane, one can define a distance between the center of the plane and the point. This distance could be determined by the classical formula method where 
-$d = \sqrt{a^2 + b^2}$, this distance is actually a parameter of the complex number: its magnitude. Usually stated as 
-
-$|z| = \sqrt{a^2 + b^2}$
-
+However we can think of any complex number, denoted by $z$ as being just a number with two distinct parts: a real part $Re\{z\}$ and an imaginary part $Im\{z\}$. By renaming each of these components by the variables $a$ and $b$ respectively, one can think of the complex number to be in the most general case as
 
 \begin{equation}
-    \frac{dx_1}{dt}=f_1(\vec{x},t),\quad \frac{dx_2}{dt}=f_2(\vec{x},t),\quad \dots, \quad \frac{dx_n}{dt}=f_n(\vec{x},t),
-\end{equation} 
+    z=a+ib
+\end{equation} where $Re\{z\} = a$, $Im\{z\} = b$ and $i=\sqrt{-1}$.
 
-\begin{lstlisting}[language=Python, frame=single] 
+ A complex number $z$ can be represented on a plane\footnote{This is called the complex plane or sometimes the Agrand plane.} with two axis, the abscissa corresponds to the real component, and the ordinate corresponds to the imaginary component\footnote{It is easy to see that, if the imaginary component equals zero, the remaining values of the plane can be resumed only in a line, this represents the well-known number line.}. With this in mind, it is possible to define a distance between the center of the plane and the complex number, represented as a point. This distance could be determined by the classical formula method where
+\begin{equation}
+    dist = \sqrt{a^2 + b^2}.
+\end{equation}
+
+This distance is an important parameter of the complex number, it is usually called \textit{magnitude}, stated as\footnote{The magnitude of a complex number is generally written $as |z| =\sqrt{z\tilde{z}} $} 
+
+\begin{equation}
+    |z| = \sqrt{a^2 + b^2}
+\end{equation}
+
+It is at this time where we can define a function that takes any complex number and maps it into another point in the plane, that is $f(z):\mathbb{C}\rightarrow \mathbb{C}$. Any transformation can be applied to the complex number.
+
+Then the filled Julia set\footnote{There are two very similar concepts, the concept of filled Julia set in this text refers to all the points within the boundary,  not only the boundary that differentiates all of these points that tend to infinity with the ones that do not.} defined by this function and a constant complex number $c$ , is the collection of all points in a delimited complex plane that do not diverge\footnote{They do not increase towards infinity} in magnitude under the repeated application of $f(z)$\cite{csc}.
+
+In other words, first there is an application of the function $f(z)$ upon a complex number $z_1$, this will yield another number $z_2$. Then the same application of $f(z)$ is done now to $z_3$, generating $z_4$. This is done iteratively while the magnitude of each number $z_i$ is no greater than a threshold value $|z_{th}|$ for a finite number of times\cite{coursera}. This is known as iteration or recursiveness; that is:
+\begin{equation}
+    f(z_1)=z_2 \longrightarrow f(z_2)=z_3 \longrightarrow f(z_3)=z_4 \longrightarrow \dots
+\end{equation}
+
+This can also be expressed as the composition of the same function an undefined number of times while it satisfies the latter condition.
+
+\begin{equation}
+    (f\circ f \circ f \circ \dots )(z) = \dots f(f(f(z)))
+\end{equation}
+
+In a more formal way this is equivalent to express that for any function $f(z)$, the filled-in Julia set (denoted by $K_c$) of $f(z)$ is the set of non-escaping points under iteration:
+
+\begin{equation}
+    K_c = \{z \in \mathbb{C}| (f^n(z))_{n \in \mathbb{N}}, \quad is \quad bounded\}
+\end{equation}
+
+where $f^n(z)$ denotes the $n^{th}$ iteration of the application of $f$ \cite{Lei}.
+
+However, it is impossible to work with the filled Julia sets without the correct tools: computers \cite{Devaney}. 
+
+\begin{lstlisting}[language=Python, frame=single]
+
 
 
 \end{lstlisting}
@@ -80,7 +114,7 @@ $|z| = \sqrt{a^2 + b^2}$
 \end{figure}
 
 
-
+\newpage
 \printbibliography[title = {References}]
 
 \end{document}
