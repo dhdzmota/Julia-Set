@@ -24,9 +24,9 @@
 
 Fractals are one of the most beautiful mathematical objects to humans, they are mostly recognized as pretty pictures that break the usual implementation of geometry with mind-bending patterns. However, they actually constitute a branch of mathematics\footnote{In this text, we will center on complex algebra and recursiveness}, opening the possibility of using mathematical tools to describe their properties\cite{Edyta}. 
 
-Fractal theory is based on geometry and dimensions. This was a new paradigm that diverged from classical geometry because it was an alternative to the model that used simple Euclid figures such as lines, circles, conic sections, polygons, and so on. Most physical systems are not regular geometric shapes; thus, a description of reality needed more complicated and had to use irregular patterns to achieve a correct description\cite{Crownover}. For instance, coastlines, mountains, lightning, and parts of living organisms have this fractal-like geometry, where simple geometry wouldn't have been enough to represent these phenomena\cite{Edyta}.
+Fractal theory is based on geometry and dimensions. This was a new paradigm that diverged from classical geometry because it was an alternative to the model that used simple Euclid figures such as lines, circles, conic sections, polygons, and so on. Most of the real physical systems don not have regular geometric shapes; thus, a description of reality needed more complicated and had to use irregular patterns to achieve a correct description\cite{Crownover}. For instance, coastlines, mountains, lightning, and parts of living organisms have this fractal-like geometry, where simple geometry wouldn't have been enough to represent these phenomena\cite{Edyta}.
 
-At their beginning, these mathematical objects were met with a huge distaste by the scientific community\footnote{They were even called monsters or pathological models.} due to the fact that they are defined in terms of fractional dimension\footnote{This term was first introduced in 1919, in the work of Felix Hausdorff. Nevertheless, formally the term fractal was introduced in 1975 by Benoit Mandelbrot.}(that's where the name fractal comes from). However,as time passed, they were slowly being accepted. 
+At their beginning, these mathematical objects were met with a huge distaste by the scientific community\footnote{They were even called monsters or pathological models.} due to the fact that they are defined in terms of fractional dimension\footnote{This term was first introduced in 1919, in the work of Felix Hausdorff. Nevertheless, formally the term fractal was introduced in 1975 by Benoit Mandelbrot.}(that's where the name fractal comes from). However, as time passed, they were slowly being more broadly accepted until now. 
 \section{Some properties}
 For the geometric shapes, there are many concepts of dimension, thus, one can use each of the distinct concepts on a geometric configuration to describe its properties. Usually, there are three\cite{Crownover}:
 
@@ -64,7 +64,7 @@ However we can think of any complex number, denoted by $z$ as being just a numbe
     z=a+ib
 \end{equation} where $Re\{z\} = a$, $Im\{z\} = b$ and $i=\sqrt{-1}$.
 
- A complex number $z$ can be represented on a plane\footnote{This is called the complex plane or sometimes the Agrand plane.} with two axis, the abscissa corresponds to the real component, and the ordinate corresponds to the imaginary component\footnote{It is easy to see that, if the imaginary component equals zero, the remaining values of the plane can be resumed only in a line, this represents the well-known number line.}. With this in mind, it is possible to define a distance between the center of the plane and the complex number, represented as a point. This distance could be determined by the classical formula method where
+ A complex number $z$ can be represented on a plane\footnote{This is called the complex plane or sometimes the Agrand plane.} with two axis, the abscissa and the ordinate correspond to the real and the imaginary component\footnote{It is easy to see that, if the imaginary component equals zero, the remaining values of the plane can be resumed only in a line, this represents the well-known number line.} respectively. With this in mind, it is possible to define a distance between the origin ($z=0+i0$) of the plane and the complex number, represented as a point. This distance could be determined by the classical formula method where
 \begin{equation}
     dist = \sqrt{a^2 + b^2}.
 \end{equation}
@@ -75,9 +75,9 @@ This distance is an important parameter of the complex number, it is usually cal
     |z| = \sqrt{a^2 + b^2}
 \end{equation}
 
-It is at this time where we can define a function that takes any complex number and maps it into another point in the plane, that is $f(z):\mathbb{C}\rightarrow \mathbb{C}$. Any transformation can be applied to the complex number.
+It is at this time where we can define a function that takes any complex number and maps it into another point in the plane, that is $f(z):\mathbb{C}\rightarrow \mathbb{C}$. Any transformation can be applied to the complex number with the requirement that the complex number, after the transformation, is still a complex number.
 
-Then the filled Julia set\footnote{There are two very similar concepts, the concept of filled Julia set in this text refers to all the points within the boundary,  not only the boundary that differentiates all of these points that tend to infinity with the ones that do not.} defined by this function and a constant complex number $c$ , is the collection of all points in a delimited complex plane that do not diverge\footnote{They do not increase towards infinity} in magnitude under the repeated application of $f(z)$\cite{csc}.
+Then the filled Julia set\footnote{There are two very similar concepts, the concept of filled Julia set in this text refers to all the points within the boundary,  not only the boundary that differentiates all of these points that tend to infinity with the ones that do not.}, defined by this function and a constant complex number $c$ , is the collection of all points in a delimited complex plane that do not diverge\footnote{They do not increase towards infinity} in magnitude under the repeated application of $f(z)$\cite{csc}.
 
 In other words, first there is an application of the function $f(z)$ upon a complex number $z_1$, this will yield another number $z_2$. Then the same application of $f(z)$ is done now to $z_3$, generating $z_4$. This is done iteratively while the magnitude of each number $z_i$ is no greater than a threshold value $|z_{th}|$ for a finite number of times\cite{coursera}. This is known as iteration or recursiveness; that is:
 \begin{equation}
@@ -90,7 +90,7 @@ This can also be expressed as the composition of the same function an undefined 
     (f\circ f \circ f \circ \dots )(z) = \dots f(f(f(z)))
 \end{equation}
 
-In a more formal way this is equivalent to express that for any function $f(z)$, the filled-in Julia set (denoted by $K_c$) of $f(z)$ is the set of non-escaping points under iteration:
+In a more formal notation, it is equivalent to express that, for any function $f(z)$, the filled-in Julia set (denoted by $K_c$) of $f(z)$ is the set of non-escaping points under iteration:
 
 \begin{equation}
     K_c = \{z \in \mathbb{C}| (f^n(z))_{n \in \mathbb{N}}, \quad is \quad bounded\}
@@ -98,11 +98,110 @@ In a more formal way this is equivalent to express that for any function $f(z)$,
 
 where $f^n(z)$ denotes the $n^{th}$ iteration of the application of $f$ \cite{Lei}.
 
-However, it is impossible to work with the filled Julia sets without the correct tools: computers \cite{Devaney}. 
+However, it is impossible to work with the filled Julia sets without the correct tools: computers \cite{Devaney}.
+
+It is a natural step to generate an algorithm that computes the result of what might the sets be for any function.
+
+The algorithm receives 5 important parameters:
+An arbitrary (preferable small) constant complex number, the threshold value of the maximum magnitude, the maximum number of iterations on each complex number, coordinates that define the limits of the complex plane, the width and height of the number of elements and a complex function.
+
+For the implementation, the use of the programming language \textit{PYTHON 3.7} is proposed. However, any other program framework serves for the acquirement of the filled Julia sets.
+
 
 \begin{lstlisting}[language=Python, frame=single]
+import numpy as np
+import matplotlib.pyplot as plt
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, frame=single]
+# Constant complex number
+c = complex(-0.162, 1.04)
+
+# Threshold value of the magnitude.
+z_th = 1000
+
+# Maximum number of iterations
+max_iteration = 50
+
+# Plane delimitations:
+x_min = -1.5
+x_max =  1.5
+
+y_min = -2
+y_max =  2
+
+# Width and height of the picture (matrix that represents the
+# complex plane) 
+w = 1000
+h = 1000
+
+# Lenght of each side of the plane
+xw = x_max - x_min
+yw = y_max - y_min
+
+# Creation of the complex plane
+complex_plane = np.zeros((h, w))
+
+# Filling of the values in the complex plane
+for i in range(w):
+    for j in range(h):
+        #Iterations for colors
+        iteration = 0
+        
+        # Obtain a certain complex number in the plane
+        z = complex(i/w*xw + x_min, j/h*yw + y_min)
+        
+        # Define a condition to stop the iterations 
+        # on each complex plane
+        while abs(z) <= z_th and iteration < max_iteration:
+            # While the condition is satisfied, 
+            # evaluate the function iteratively
+            z = z**3 + c
+            iteration += 1
+        # Create a ratio for the number of iterations so a
+        #value can be assigned due to normalization.
+        ratio = iteration / max_iteration
+        
+        # Assign that value to the complex plane. 
+        complex_plane[j,i] = ratio
 
 
+\end{lstlisting}
+
+\begin{lstlisting}[language = Python, frame = single]
+# Define a figure size
+fig = plt.subplots(figsize=(20.1,10.))
+
+# Show the image of the complex plane with interpolation of the values
+plt.imshow(complex_plane, interpolation='quadric', cmap='gist_yarg')
+
+# Manually write the function
+fz = 'z^2+c'
+
+# A depending on the complex number c for the title
+text1 = f'Julia set: c = {np.real(c)}-{abs(np.imag(c))}i, $f(z)={fz}$
+text2 = f'Julia set: c = {np.real(c)}+{np.imag(c)}i,  $f(z)={fz}$'
+text3 = f'Julia set: c = {np.real(c)},  $f(z)={fz}$'
+
+# Select a text 
+if np.imag(c) < 0:
+    plt.title(text1)
+elif np.imag(c)>0:    
+    plt.title(text2)
+else:
+    plt.title(text3)
+    
+# No axis in the figure
+plt.axis('off')
+
+#Print the value 
+if True:
+    pass
+else:
+    plt.savefig('c*cos(z)*sin(z2)+c.png')
+
+# Show the image
+plt.show()
 
 \end{lstlisting}
 
