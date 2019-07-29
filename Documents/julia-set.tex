@@ -22,7 +22,7 @@
 
 \section{Introduction}
 
-Fractals are one of the most beautiful mathematical objects to humans, they are mostly recognized as pretty pictures that break the usual implementation of geometry with mind-bending patterns. However, they constitute a branch of mathematics\footnote{In this text, we will center on complex algebra and recursiveness}, opening the possibility of using mathematical tools to describe their properties\cite{Edyta}. 
+Fractals are one of the most beautiful mathematical objects to humans, they are mostly recognized as pretty pictures that break the usual implementation of geometry with mind-bending patterns. However, they constitute a branch of mathematics\footnote{In this text, we will center on complex algebra and recursiveness.}, opening the possibility of using mathematical tools to describe their properties\cite{Edyta}. 
 
 Fractal theory is based on geometry and dimensions. This was a new paradigm that diverged from classical geometry because it was an alternative to the model that used simple Euclid figures such as lines, circles, conic sections, polygons, and so on. Most of the real physical systems don not have regular geometric shapes; thus, a description of reality needed more complicated and had to use irregular patterns to achieve a correct description\cite{Crownover}. For instance, coastlines, mountains, lightning, and parts of living organisms have this fractal-like geometry, where simple geometry wouldn't have been enough to represent these phenomena \cite{Edyta}.
 
@@ -34,7 +34,7 @@ For the geometric shapes, there are many concepts of dimension, thus, one can us
 \begin{itemize}
     \item \textbf{Box Dimension}
     \begin{itemize}
-        \item Fractional dimension\footnote{Also called Minkowski dimension} concept of choice. It comes from the generalization of the usual dimension for not only integers but the whole real number spectrum, which also account for length, area, and volume. It is computationally determined with the reduced formula:
+        \item Fractional dimension\footnote{Also called Minkowski dimension.} concept of choice. It comes from the generalization of the usual dimension for not only integers but the whole real number spectrum, which also account for length, area, and volume. It is computationally determined with the reduced formula:
         \begin{equation}
             log N(x)=- dlog(x)
         \end{equation}
@@ -67,12 +67,12 @@ However, we can think of any complex number, denoted by $z$ as being just a numb
     z=a+ib
 \end{equation} where $Re\{z\} = a$, $Im\{z\} = b$ and $i=\sqrt{-1}$.
 
- A complex number $z$ can be represented on a plane\footnote{This is called the complex plane or sometimes the Agrand plane.} with two axis, the abscissa and the ordinate corresponding to the real and the imaginary component\footnote{It is easy to see that, if the imaginary component equals zero, the remaining values of the plane can be resumed only in a line, this represents the well-known number line.} respectively. With this in mind, it is possible to define a distance between the origin ($z=0+i0$) of the plane and the complex number, represented as a point. This distance could be determined by the classical formula method where
+ A complex number $z$ can be represented on a plane\footnote{This is called the complex plane or sometimes the Agrand plane.} with two axes, the abscissa and the ordinate corresponding to the real and the imaginary component\footnote{It is easy to see that, if the imaginary component equals zero, the remaining values of the plane can be resumed only in a line, this represents the well-known number line.} respectively. With this in mind, it is possible to define a distance between the origin ($z=0+i0$) of the plane and the complex number, represented as a point. This distance could be determined by the classical formula method where
 \begin{equation}
     dist = \sqrt{a^2 + b^2}.
 \end{equation}
 
-This distance is an important parameter of the complex number, it is usually called \textit{magnitude}, stated as\footnote{The magnitude of a complex number is generally written $as |z| =\sqrt{z\tilde{z}} $} 
+This distance is an important parameter of the complex number, it is usually called \textit{magnitude}, stated as\footnote{The magnitude of a complex number is generally written $as |z| =\sqrt{z\tilde{z}}$.} 
 
 \begin{equation}
     |z| = \sqrt{a^2 + b^2}
@@ -80,7 +80,7 @@ This distance is an important parameter of the complex number, it is usually cal
 
 It is at this time where we can define a function that takes any complex number and maps it into another point in the plane, that is $f(z):\mathbb{C}\rightarrow \mathbb{C}$. Any transformation can be applied to the complex number with the requirement that the complex number, after the transformation, is still a complex number.
 
-Then the filled Julia set\footnote{There are two very similar concepts, the concept of filled Julia set in this text refers to all the points within the boundary,  not only the boundary that differentiates all of these points that tend to infinity with the ones that do not.}, defined by this function and a constant complex number $c$, is the collection of all points in a delimited complex plane that does not diverge\footnote{They do not increase towards infinity} in magnitude under the repeated application of $f(z)$\cite{csc}.
+Then the filled Julia set\footnote{There are two very similar concepts, the concept of filled Julia set in this text refers to all the points within the boundary,  not only the boundary that differentiates all of these points that tend to infinity with the ones that do not.}, defined by this function and a constant complex number $c$, is the collection of all points in a delimited complex plane that does not diverge\footnote{They do not tend towards infinity.} in magnitude under the repeated application of $f(z)$\cite{csc}.
 
 In other words, first there is an application of the function $f(z)$ upon a complex number $z_1$, this will yield another number $z_2$. Then the same application of $f(z)$ is done now to $z_3$, generating $z_4$. This is done iteratively while the magnitude of each number $z_i$ is no greater than a threshold value $|z_{th}|$ for a finite number of times\cite{coursera}. This is known as iteration or recursiveness; that is:
 \begin{equation}
@@ -257,11 +257,7 @@ When a certain function is defined and a complex number $c$ is declared, fractal
   \end{subfigure}
 \end{figure}
 
-
-
-
 \newpage
-
 
 \printbibliography[title = {References}]
 
