@@ -4,6 +4,7 @@
 \usepackage{parskip}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{listings}
 \usepackage{setspace}
 \usepackage[style=phys,url = true]{biblatex}
@@ -220,16 +221,44 @@ plt.show()
 When a certain function is defined and a complex number $c$ is declared, fractal-emerging patterns are created. Some of them are shown next.
 
 \newpage
+\section{Some Images}
 
-\section{Images}
-\begin{figure}[h]
-    \centering{\includegraphics[scale=.7]{Images/rungekutta.png}}
-    \caption{Numerical solution for the system of equations.}
-    \label{fig:sol}
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{1\linewidth}
+    \includegraphics[width=\linewidth]{Fractal_image/3cos(z)+c_-0444+-01131.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{1\linewidth}
+    \includegraphics[width=\linewidth]{Fractal_image/z^2+c_-084+-02166.png}
+  \end{subfigure}
 \end{figure}
 
+\newpage
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{1\linewidth}
+    \includegraphics[width=\linewidth]{Fractal_image/z^2+c_-01+0651.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{1\linewidth}
+    \includegraphics[width=\linewidth]{Fractal_image/z^2+c_-001+-0801.png}
+  \end{subfigure}
+\end{figure}
 
 \newpage
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{1\linewidth}
+    \includegraphics[width=\linewidth]{Fractal_image/3sin(z)+c_-07444+01131.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{1\linewidth}
+    \includegraphics[width=\linewidth]{Fractal_image/3cos(z)+c_-0444+-01131.png}
+  \end{subfigure}
+\end{figure}
+
+\newpage
+
 \printbibliography[title = {References}]
 
 \end{document}
